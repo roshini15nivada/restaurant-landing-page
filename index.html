@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Spice Garden Restaurant</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <nav>
+    <div class="brand">🌿 Spice Garden</div>
+    <ul>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact" class="nav-cta">Reserve a Table</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-text">
+      <p class="tagline">Authentic Indian Cuisine</p>
+      <h1>Experience the<br><span>True Taste</span><br>of India</h1>
+      <p class="hero-sub">Handcrafted recipes passed down through generations, made with love and the finest spices.</p>
+      <div class="hero-btns">
+        <a href="#menu" class="btn-gold">Explore Menu</a>
+        <a href="#contact" class="btn-outline">Book a Table</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HIGHLIGHTS -->
+  <section class="highlights">
+    <div class="highlight-card">
+      <span>🕐</span>
+      <h3>Open Daily</h3>
+      <p>11:00 AM – 10:30 PM</p>
+    </div>
+    <div class="highlight-card">
+      <span>🌶️</span>
+      <h3>Fresh Ingredients</h3>
+      <p>Farm-to-table every day</p>
+    </div>
+    <div class="highlight-card">
+      <span>🏆</span>
+      <h3>Award Winning</h3>
+      <p>Best Restaurant 2024</p>
+    </div>
+    <div class="highlight-card">
+      <span>🚚</span>
+      <h3>Home Delivery</h3>
+      <p>Within 5 km radius</p>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section class="menu" id="menu">
+    <div class="section-label">Our Specialties</div>
+    <h2 class="section-title">Popular Dishes</h2>
+    <div class="menu-tabs">
+      <button class="tab active" onclick="filterMenu('all')">All</button>
+      <button class="tab" onclick="filterMenu('veg')">🥦 Veg</button>
+      <button class="tab" onclick="filterMenu('nonveg')">🍗 Non-Veg</button>
+      <button class="tab" onclick="filterMenu('dessert')">🍮 Desserts</button>
+    </div>
+    <div class="menu-grid" id="menuGrid">
+      <div class="menu-card" data-cat="veg">
+        <div class="dish-emoji">🫕</div>
+        <div class="dish-info">
+          <h3>Dal Makhani</h3>
+          <p>Slow-cooked black lentils in a rich, buttery tomato gravy</p>
+          <div class="dish-footer"><span class="price">₹220</span><span class="badge veg-badge">VEG</span></div>
+        </div>
+      </div>
+      <div class="menu-card" data-cat="nonveg">
+        <div class="dish-emoji">🍗</div>
+        <div class="dish-info">
+          <h3>Butter Chicken</h3>
+          <p>Tender chicken in a velvety tomato-cream sauce</p>
+          <div class="dish-footer"><span class="price">₹320</span><span class="badge nonveg-badge">NON-VEG</span></div>
+        </div>
+      </div>
+      <div class="menu-card" data-cat="veg">
+        <div class="dish-emoji">🧆</div>
+        <div class="dish-info">
+          <h3>Paneer Tikka</h3>
+          <p>Marinated cottage cheese grilled in a tandoor oven</p>
+          <div class="dish-footer"><span class="price">₹280</span><span class="badge veg-badge">VEG</span></div>
+        </div>
+      </div>
+      <div class="menu-card" data-cat="nonveg">
+        <div class="dish-emoji">🍖</div>
+        <div class="dish-info">
+          <h3>Mutton Biryani</h3>
+          <p>Aromatic basmati rice layered with slow-cooked mutton</p>
+          <div class="dish-footer"><span class="price">₹380</span><span class="badge nonveg-badge">NON-VEG</span></div>
+        </div>
+      </div>
+      <div class="menu-card" data-cat="dessert">
+        <div class="dish-emoji">🍮</div>
+        <div class="dish-info">
+          <h3>Gulab Jamun</h3>
+          <p>Soft milk-solid dumplings soaked in rose-flavored syrup</p>
+          <div class="dish-footer"><span class="price">₹120</span><span class="badge dessert-badge">DESSERT</span></div>
+        </div>
+      </div>
+      <div class="menu-card" data-cat="veg">
+        <div class="dish-emoji">🥙</div>
+        <div class="dish-info">
+          <h3>Chole Bhature</h3>
+          <p>Spiced chickpeas served with fluffy deep-fried bread</p>
+          <div class="dish-footer"><span class="price">₹180</span><span class="badge veg-badge">VEG</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-text">
+      <div class="section-label">Our Story</div>
+      <h2 class="section-title">Cooking with<br>Passion Since 1998</h2>
+      <p>Spice Garden was founded with a simple dream: to bring authentic regional Indian flavors to the city. Our head chef, with over 25 years of experience, personally selects every spice and ingredient.</p>
+      <p>We believe food is more than just nourishment — it's culture, memory, and love on a plate.</p>
+      <a href="#contact" class="btn-gold">Visit Us Today</a>
+    </div>
+    <div class="about-visual">
+      <div class="about-box">
+        <div class="big-num">25+</div>
+        <p>Years of Experience</p>
+      </div>
+      <div class="about-box">
+        <div class="big-num">50+</div>
+        <p>Menu Items</p>
+      </div>
+      <div class="about-box">
+        <div class="big-num">10k+</div>
+        <p>Happy Customers</p>
+      </div>
+      <div class="about-box">
+        <div class="big-num">4.9⭐</div>
+        <p>Google Rating</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="section-label">Find Us</div>
+    <h2 class="section-title">Reserve Your Table</h2>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="info-item">📍 <span>12, Anna Nagar, Chennai - 600040</span></div>
+        <div class="info-item">📞 <span>+91 98765 43210</span></div>
+        <div class="info-item">📧 <span>hello@spicegarden.com</span></div>
+        <div class="info-item">🕐 <span>Mon–Sun: 11:00 AM – 10:30 PM</span></div>
+      </div>
+      <div class="reserve-form">
+        <input type="text" placeholder="Your Name" />
+        <input type="tel" placeholder="Phone Number" />
+        <input type="date" />
+        <input type="number" placeholder="Number of Guests" min="1" max="20"/>
+        <button class="btn-gold" style="width:100%;border:none;cursor:pointer;font-size:1rem;">Book Now</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>🌿 Spice Garden &nbsp;|&nbsp; Authentic Indian Cuisine &nbsp;|&nbsp; © 2025</p>
+  </footer>
+
+  <script>
+    function filterMenu(cat) {
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      event.target.classList.add('active');
+      document.querySelectorAll('.menu-card').forEach(card => {
+        card.style.display = (cat === 'all' || card.dataset.cat === cat) ? 'flex' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>
